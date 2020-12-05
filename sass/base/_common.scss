@@ -40,17 +40,25 @@ p {
 }
 
 .container {
-  width: 1280px;
-  padding-left: 80px;
-  padding-right: 80px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @include for-size(desktop) {
+    width: 1280px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .content-wrapper {
-  padding-left: 40px;
-  padding-right: 20px;
-  width: calc(100% / 12 * 5);
+  @include for-size(desktop) {
+    padding-left: 40px;
+    padding-right: 20px;
+    width: calc(100% / 12 * 5);
+  }
 }
 
 .title {
@@ -59,9 +67,12 @@ p {
 }
 
 .page-title {
-  font-size: 48px;
+  font-size: 35px;
   line-height: 1.17;
   margin-bottom: 25px;
+  @include for-size(desktop) {
+    font-size: 48px;
+  }
 }
 
 .item-title {
