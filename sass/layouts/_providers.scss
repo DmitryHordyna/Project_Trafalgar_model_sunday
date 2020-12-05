@@ -1,0 +1,17 @@
+.providers {
+  margin-left: auto;
+  background-image: url(../img/decor-dots.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 40px right -40px;
+}
+
+.providers .content-wrapper {
+  padding: 150px 0;
+  margin-left: auto;
+}
+
+.providers > .container {
+  background-image: url(../img/healthcare-img.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}

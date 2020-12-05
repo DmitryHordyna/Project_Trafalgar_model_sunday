@@ -1,0 +1,17 @@
+.hero {
+  background-image: url(../img/decor-dots.svg);
+  background-repeat: no-repeat;
+  background-position: top 40px left -40px;
+}
+
+.hero .content-wrapper {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  padding-right: 20px;
+}
+
+.hero > .container {
+  background-image: url(../img/hero-img.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
