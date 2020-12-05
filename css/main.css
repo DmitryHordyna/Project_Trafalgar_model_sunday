@@ -585,14 +585,22 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 2px solid red;
 }
 
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: "Muli", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.67;
   color: var(--main-color);
+}
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 img {
@@ -627,7 +635,7 @@ p {
   margin-right: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container {
     width: 1280px;
     padding-left: 80px;
@@ -635,7 +643,7 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .content-wrapper {
     padding-left: 40px;
     padding-right: 20px;
@@ -654,7 +662,7 @@ p {
   margin-bottom: 25px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .page-title {
     font-size: 48px;
   }
@@ -757,13 +765,20 @@ p {
 }
 
 .section-title {
-  font-size: 36px;
-  line-height: 1.56;
+  font-size: 30px;
+  line-height: 1.36;
+}
+
+@media (min-width: 1280px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.56;
+  }
 }
 
 .section-title::after {
   display: block;
-  content: '';
+  content: "";
   margin-top: 26px;
   background: var(--title-color);
   border-radius: 5px;
@@ -796,7 +811,7 @@ p {
   padding-right: 20px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .hero .content-wrapper {
     padding-top: 80px;
     padding-bottom: 200px;
@@ -810,7 +825,7 @@ p {
   background-size: 50%;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .hero > .container {
     background-position: right;
   }
@@ -825,16 +840,22 @@ p {
 }
 
 .service-list {
-  display: flex;
+  overflow: hidden;
   position: relative;
-  flex-wrap: wrap;
-  margin-left: -30px;
   margin-top: -30px;
+}
+
+@media (min-width: 1280px) {
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .service-list::after {
   position: absolute;
-  content: ' ';
+  content: " ";
   display: block;
   top: 41.5%;
   right: -50px;
@@ -844,19 +865,24 @@ p {
 }
 
 .services-item {
-  margin-left: 30px;
   margin-top: 30px;
   padding: 45px;
-  flex-basis: calc(100% / 3 - 30px);
   background: #ffffff;
-  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.85);
   border-radius: 20px;
   z-index: 2;
 }
 
+@media (min-width: 1280px) {
+  .services-item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+}
+
 .services-item::before {
   background-image: url(../img/icons/frame1.svg);
-  content: '';
+  content: "";
   display: block;
   height: 95px;
   background-repeat: no-repeat;
@@ -892,24 +918,64 @@ p {
 }
 
 .providers .content-wrapper {
-  padding: 150px 0;
+  padding: 50px 0;
   margin-left: auto;
 }
 
-.providers > .container {
-  background-image: url(../img/healthcare-img.png);
-  background-repeat: no-repeat;
-  background-position: left center;
+@media (min-width: 1280px) {
+  .providers .content-wrapper {
+    padding: 150px 0;
+  }
 }
 
-.app-store > .container {
-  background-image: url(../img/apps-img.png);
-  background-repeat: no-repeat;
-  background-position: right center;
+@media (max-width: 767px) {
+  .providers .content-wrapper:before {
+    content: " ";
+    display: block;
+    background-image: url("../img/healthcare-img.png");
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1280px) {
+  .providers > .container {
+    background-image: url(../img/healthcare-img.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-store > .container:before {
+    content: " ";
+    display: block;
+    background-image: url("../img/apps-img.png");
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app-store > .container {
+    background-image: url(../img/apps-img.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
 }
 
 .app-store .content-wrapper {
-  padding: 150px 0;
+  padding: 50px 0;
+}
+
+@media (min-width: 1280px) {
+  .app-store .content-wrapper {
+    padding: 150px 0;
+  }
 }
 
 .providers .btn,

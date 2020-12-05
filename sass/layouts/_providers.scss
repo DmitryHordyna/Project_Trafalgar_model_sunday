@@ -6,12 +6,29 @@
 }
 
 .providers .content-wrapper {
-  padding: 150px 0;
+  padding: 50px 0;
   margin-left: auto;
+  @include for-size(desktop) {
+    padding: 150px 0;
+  }
+}
+
+.providers .content-wrapper:before {
+  @include for-size(mobile-only) {
+    content: " ";
+    display: block;
+    background-image: url("../img/healthcare-img.png");
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .providers > .container {
-  background-image: url(../img/healthcare-img.png);
-  background-repeat: no-repeat;
-  background-position: left center;
+  @include for-size(desktop) {
+    background-image: url(../img/healthcare-img.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
 }
