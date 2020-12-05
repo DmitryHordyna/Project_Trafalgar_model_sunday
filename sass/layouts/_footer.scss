@@ -1,31 +1,46 @@
 .footer {
-  padding-top: 109px;
-  padding-bottom: 109px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background: url(../img/decor-dots-after.svg),
     linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
   background-repeat: no-repeat;
   background-position: bottom -20px left -20px, center center;
   color: #ffffff;
+
+  @include for-size(desktop) {
+    padding-top: 109px;
+    padding-bottom: 109px;
+  }
 }
 .footer .logo {
   margin-bottom: 22px;
   color: #ffffff;
 }
 .copyright-box {
-  width: calc(100% / 12 * 4);
+  width: 100%;
+  @include for-size(desktop) {
+    width: calc(100% / 12 * 4);
+  }
 }
 
 .footed-menu {
-  width: calc(100% / 12 * 6);
+  width: 100%;
+  @include for-size(desktop) {
+    width: calc(100% / 12 * 6);
+  }
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer-menu-item {
-  flex-basis: calc((100% -60) / 3);
+  @include for-size(desktop) {
+    flex-basis: calc((100% -60) / 3);
+  }
 }
 
 .footer-menu-link {

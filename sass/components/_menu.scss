@@ -1,5 +1,7 @@
 .menu-list {
-  display: flex;
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 
 .menu-item:not(:last-child) {

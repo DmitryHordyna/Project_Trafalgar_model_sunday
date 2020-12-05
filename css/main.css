@@ -738,8 +738,10 @@ p {
   margin-right: 12px;
 }
 
-.menu-list {
-  display: flex;
+@media (min-width: 1280px) {
+  .menu-list {
+    display: flex;
+  }
 }
 
 .menu-item:not(:last-child) {
@@ -1219,12 +1221,19 @@ p {
 }
 
 .footer {
-  padding-top: 109px;
-  padding-bottom: 109px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background: url(../img/decor-dots-after.svg), linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
   background-repeat: no-repeat;
   background-position: bottom -20px left -20px, center center;
   color: #ffffff;
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    padding-top: 109px;
+    padding-bottom: 109px;
+  }
 }
 
 .footer .logo {
@@ -1233,20 +1242,36 @@ p {
 }
 
 .copyright-box {
-  width: calc(100% / 12 * 4);
+  width: 100%;
+}
+
+@media (min-width: 1280px) {
+  .copyright-box {
+    width: calc(100% / 12 * 4);
+  }
 }
 
 .footed-menu {
-  width: calc(100% / 12 * 6);
+  width: 100%;
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 1280px) {
+  .footed-menu {
+    width: calc(100% / 12 * 6);
+  }
 }
 
-.footer-menu-item {
-  flex-basis: calc((100% -60) / 3);
+@media (min-width: 1280px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-menu-item {
+    flex-basis: calc((100% -60) / 3);
+  }
 }
 
 .footer-menu-link {
